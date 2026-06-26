@@ -1,0 +1,284 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+padding:20px 10%;
+background:purple;
+color:white;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav li{
+margin-left:25px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+transition:.4s;
+}
+
+nav a:hover{
+color:yellow;
+}
+
+
+/* HERO */
+.hero{
+height:80vh;
+background:
+linear-gradient(
+rgba(0,0,0,.5),
+rgba(0,0,0,.5)
+),
+url("./customer.jpg");
+background-size:cover;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:white;
+animation:zoom 10s infinite;
+}
+
+.hero h1{
+font-size:60px;
+}
+
+.hero p{
+margin-top:20px;
+font-size:20px;
+}
+
+
+@keyframes zoom{
+
+50%{
+background-size:110%;
+}
+}
+
+
+/* REVIEWS */
+
+.review-section{
+padding:70px;
+text-align:center;
+}
+
+.container{
+display:flex;
+gap:30px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.card{
+width:280px;
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px gray;
+transition:.5s;
+}
+
+.card:hover{
+transform:
+translateY(-10px)
+scale(1.05);
+}
+
+.card img{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:15px;
+}
+
+
+/* RATINGS */
+
+.rating{
+background:#f2f2f2;
+padding:60px;
+text-align:center;
+}
+
+.rating-box{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.rating-box div{
+background:palevioletred;
+color:white;
+padding:30px;
+width:220px;
+border-radius:12px;
+transition:.5s;
+}
+
+.rating-box div:hover{
+transform:rotate(5deg);
+}
+
+
+/* SUCCESS */
+
+.success{
+padding:70px;
+text-align:center;
+}
+
+.story{
+margin:20px auto;
+width:70%;
+padding:25px;
+background:#e8f8ff;
+border-left:8px solid blue;
+transition:.4s;
+}
+
+.story:hover{
+transform:scale(1.03);
+}
+
+
+/* FOOTER */
+
+footer{
+background:purple;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+header{
+flex-direction:column;
+}
+
+.hero h1{
+font-size:35px;
+}
+}
+
+/* MOBILE RESPONSIVE DESIGN */
+
+@media screen and (max-width:768px){
+
+/* Header */
+header{
+flex-direction:column;
+align-items:center;
+padding:15px;
+background:linear-gradient(90deg,purple,#ff4fd8);
+}
+
+/* Navigation */
+nav ul{
+flex-direction:column;
+align-items:center;
+margin-top:15px;
+}
+
+nav li{
+margin:10px 0;
+}
+
+nav a{
+background:white;
+color:purple;
+padding:8px 18px;
+border-radius:20px;
+display:inline-block;
+}
+
+nav a:hover{
+background:yellow;
+color:black;
+}
+
+/* Hero Section */
+.hero{
+height:60vh;
+padding:20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:32px;
+color:#ffe600;
+}
+
+.hero p{
+font-size:16px;
+color:#ffffff;
+}
+
+/* Review Cards */
+.container{
+flex-direction:column;
+align-items:center;
+}
+
+.card{
+width:90%;
+background:#fff0ff;
+}
+
+.card:hover{
+transform:scale(1.03);
+}
+
+/* Ratings */
+.rating{
+background:#f7e6ff;
+}
+
+.rating-box{
+flex-direction:column;
+align-items:center;
+}
+
+.rating-box div{
+width:90%;
+background:linear-gradient(
+45deg,
+#ff4fd8,
+#7b2ff7
+);
+}
+
+/* Success Stories */
+.story{
+width:95%;
+background:#e0f7ff;
+border-left:8px solid purple;
+}
+
+/* Footer */
+footer{
+background:#4b0082;
+padding:25px;
+}
+
+}
